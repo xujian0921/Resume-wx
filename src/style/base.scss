@@ -1,0 +1,27 @@
+view,
+text,
+navigator,
+input,
+image,
+swiper,
+swiper-item,
+scroll-view,
+page {
+  /* 微信小程序中 不支持 * 通配符 */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+page{
+  font-size: 28rpx;
+  color: #666;
+}
+image{
+  width: 100%;
+  display: block;
+}
+.text_one_line {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}

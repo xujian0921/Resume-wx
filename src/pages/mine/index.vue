@@ -3,87 +3,30 @@
 		<view class="header">
 			<image src="@/static/avatar.jpg"></image>
 		</view>
-		<view v-if="isLogin" class="user">
+		<view class="user">
 			<view class="account">
 				用户名: {{ userInfo.account }}
 			</view>
-			<button
-			 class="button"
-			 @click="outlogin"
-			>退出登录</button>
-		</view>
-		<view v-else class="login">
-			<view class="login_info">
-				<view class="login_text">
-					账号密码登录
-				</view>
-				<input
-				 class="uni-input" 
-				 focus placeholder="请输入用户名"
-				 v-model="loginInfo.account"
-				/>
-				<input
-				 class="uni-input" 
-				 password="true"
-				 placeholder="请输入密码"
-				 v-model="loginInfo.password"
-				/>
+			<view class="wechat">
+				<image class="wechat_img" src="@/static/wechat.jpg"></image>
+				<view>扫一扫上面的二维码图案，加我微信</view>
 			</view>
-			<button
-			 class="button"
-			 @click="login"
-			>登录</button>
 		</view>
 	</view>
 </template>
 <script>
-import { login, getPersonUser } from '@/api/user.js'
-import { findByAccount } from '@/api/resume.js'
 export default {
 	data(){
 		return {
-			isLogin: false,
 			userInfo: {
 				account: '机智的小恐龙'
-			},
-			loginInfo: {
-				account: undefined,
-				password: undefined
 			}
 		}
 	},
 	mounted() {
-		if(uni.getStorageSync('TOKEN')) {
-			this.isLogin = true
-		}
 	},
 	methods: {
-		outlogin() {
-			this.isLogin = false
-			uni.removeStorageSync('TOKEN')
-			uni.removeStorageSync('ACCOUNT')
-		},
-		async login() {
-			if(!this.loginInfo.account || !this.loginInfo.password) {
-				uni.showToast({
-					title: '请输入账号和密码',
-					icon:"none"
-				})
-				return
-			}
-			const { data } = await login(this.loginInfo)
-			uni.setStorageSync('TOKEN', data.token)
-			const { data: userInfo } = await getPersonUser()
-			this.userInfo = userInfo
-			uni.setStorageSync('ACCOUNT', userInfo.account)
-			const { data: resumeInfo } = await findByAccount({ account: userInfo.account })
-			uni.setStorageSync('RESUMEINFO', JSON.stringify(resumeInfo[0]))
-			this.isLogin = true
-			uni.showToast({
-				title: '登录成功',
-				icon:"none"
-			})
-		}
+	
 	}
 }
 </script>
@@ -108,10 +51,20 @@ export default {
 		.user{
 			display: flex;
 			flex-direction: column;
-			justify-content: space-between;
+			// justify-content: space-between;
 			align-items: center;
 			padding: 50rpx;
 			flex: 1;
+			.wechat {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				.wechat_img {
+					width: 535rpx;
+					height: 570rpx;
+				}
+			}
 		}
 		.login {
 			display: flex;

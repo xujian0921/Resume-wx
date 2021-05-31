@@ -39,7 +39,10 @@
 					tel：{{ userInfo.phone }}
 				</view>
 				<view class="info_item">
-					email：{{ userInfo.email }}
+					工作年限：5
+				</view>
+				<view class="info_item1">
+					邮箱：{{ userInfo.email }}
 				</view>
 			</view>
 		</view>
@@ -71,18 +74,31 @@
 export default {
 	data() {
 		return {
-			userInfo: {}
+			userInfo: {
+				sign_one: '我好像是一个在海边玩耍的孩子，不时为拾到比通常更光滑的石子或更美丽的贝壳而欢欣鼓舞，而展现在我面前的是完全未探明的真理之海',
+				job_intention: 'web工程师',
+				name: '许健',
+				born: '1996-9',
+				gender: 1,
+				native_place: '安徽',
+				education: 2,
+				major: '计算机科学与技术',
+				phone: '18895312923',
+				email: 'xujian0921@qq.com',
+				skill_array: ['vue','javascript'],
+				summary_array: ['basketball', 'football']
+			}
 		}
 	},
 	mounted() {
-		this.userInfo = JSON.parse(uni.getStorageSync('RESUMEINFO'))
-		console.log(this.userInfo,'this.userInfo ')
-		let skill_array = this.userInfo.skill.split('-')
-		skill_array.shift()
-		this.userInfo.skill_array = skill_array
-		let summary_array = this.userInfo.summary.split('-')
-		summary_array.shift()
-		this.userInfo.summary_array = summary_array
+		// this.userInfo = JSON.parse(uni.getStorageSync('RESUMEINFO'))
+		// console.log(this.userInfo,'this.userInfo ')
+		// let skill_array = this.userInfo.skill.split('-')
+		// skill_array.shift()
+		// this.userInfo.skill_array = skill_array
+		// let summary_array = this.userInfo.summary.split('-')
+		// summary_array.shift()
+		// this.userInfo.summary_array = summary_array
 	}
 }
 </script>
@@ -143,6 +159,10 @@ export default {
 			flex-wrap: wrap;
 			.info_item {
 				width: 50%;
+				padding: 10rpx 0;
+			}
+			.info_item1 {
+				width: 100%;
 				padding: 10rpx 0;
 			}
 		}

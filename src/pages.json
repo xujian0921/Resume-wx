@@ -1,12 +1,6 @@
 {
 	"pages": [
 		{
-			"path": "pages/login/index",
-			"style": {
-				"navigationBarTitleText": "登录"
-			}
-		},
-		{
 			"path": "pages/home/index",
 			"style": {
 				"navigationBarTitleText": "基本信息"
@@ -19,9 +13,9 @@
 			}
 		},
 		{
-			"path": "pages/search/index",
+			"path": "pages/openSource/index",
 			"style": {
-				"navigationBarTitleText": "搜索"
+				"navigationBarTitleText": "开源项目"
 			}
 		},
 		
@@ -58,8 +52,8 @@
 				"selectedIconPath": "./static/icon/img.png"
 			},
 			{
-				"pagePath": "pages/search/index",
-				"text": "搜索",
+				"pagePath": "pages/openSource/index",
+				"text": "开源",
 				"iconPath": "./static/icon/_search.png",
 				"selectedIconPath": "./static/icon/search.png"
 			},

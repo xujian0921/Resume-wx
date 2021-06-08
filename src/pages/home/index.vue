@@ -75,7 +75,7 @@ export default {
 	data() {
 		return {
 			userInfo: {
-				sign_one: '我好像是一个在海边玩耍的孩子，不时为拾到比通常更光滑的石子或更美丽的贝壳而欢欣鼓舞，而展现在我面前的是完全未探明的真理之海',
+				sign_one: '没有自律和自觉，就没有真正的自由和自在。 ',
 				job_intention: 'web工程师',
 				name: '许健',
 				born: '1996-9',
@@ -83,7 +83,7 @@ export default {
 				native_place: '安徽',
 				education: 2,
 				major: '计算机科学与技术',
-				phone: '18895312923',
+				phone: '188****1546',
 				email: 'xujian0921@qq.com',
 				skill_array: ['vue','javascript'],
 				summary_array: ['basketball', 'football']

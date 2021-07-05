@@ -67,6 +67,26 @@ npm install    //安装失败的话可以切换到淘宝源  cnpm install 或者
 
 ![H5](https://opensource-photo.oss-cn-shanghai.aliyuncs.com/Resume/resume-wx-login.png )
 
+
+
+### 基本信息
+
+![H5](https://opensource-photo.oss-cn-shanghai.aliyuncs.com/Resume/resume-wx-home1.png)
+
+​                                              
+
+
+
+![H5](https://opensource-photo.oss-cn-shanghai.aliyuncs.com/Resume/resume-wx-home2.png)
+
+### 工作经历
+
+![H5](https://opensource-photo.oss-cn-shanghai.aliyuncs.com/Resume/resume-wx-exprece.png)
+
+### 我的
+
+![H5](https://opensource-photo.oss-cn-shanghai.aliyuncs.com/Resume/resume-wx-person.png)
+
 ### 搜索
 
 ![H5](https://opensource-photo.oss-cn-shanghai.aliyuncs.com/Resume/resume-wx-search.png )

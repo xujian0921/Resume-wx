@@ -39,16 +39,19 @@
 					tel：{{ userInfo.phone }}
 				</view>
 				<view class="info_item">
-					工作年限：5
+					工作年限：3
 				</view>
 				<view class="info_item1">
 					邮箱：{{ userInfo.email }}
+				</view>
+				<view class="info_item1">
+					Github：{{ userInfo.github }}
 				</view>
 			</view>
 		</view>
 		<view class="list">
 			<view class="title">
-				<text class="title_name">skill</text>
+				<text class="title_name">求职技能</text>
 				<text class="title_line"></text>
 			</view>
 			<view class="list_content">
@@ -59,7 +62,7 @@
 		</view>
 		<view class="list">
 			<view class="title">
-				<text class="title_name">summary</text>
+				<text class="title_name">自我评价</text>
 				<text class="title_line"></text>
 			</view>
 			<view class="list_content">
@@ -85,8 +88,29 @@ export default {
 				major: '计算机科学与技术',
 				phone: '188****1546',
 				email: 'xujian0921@qq.com',
-				skill_array: ['vue','javascript'],
-				summary_array: ['basketball', 'football']
+				github: 'https://github.com/xujian0921',
+				skill_array: [
+					'3年前端开发经验，深入理解Web前端开发技术；熟练掌握Vue框架，熟悉React框架；',
+					'熟悉交互设计理论，能够将优秀的需求设计计划落地到项目中；',
+					'熟悉项目打包部署上线，网站性能优化，了解浏览器实现原理；',
+					'熟练运用vue + vuex+ vue-router+ axios + ui库开发项目；',
+					'熟练运用typeScript开发项目；',
+					'熟练运用 electron + vue  开发桌面端项目；',
+					'熟练使用rem,flex及百分比来进行移动端页面布局；',
+					'熟练的使用scss预处理器进行css样式的编写；',
+					'熟悉webpack前端构建方案；',
+					'熟悉使用小程序开发工具开发小程序；',
+					'熟悉react 、ant design pro v4 （UmiJS + Dva + Ant ）开发react项目 ',
+					'熟悉node.js ,使用koa2 + Mongodb 开发RESTful 风格 API  ',
+					'能够独立完成一个复杂模块或项目的研发工作；'
+				],
+				summary_array: [
+					'具备规范的代码编写风格，高效的工作习惯；',
+					'有较强的沟通能力和团队合作精神；',
+					'喜欢逛论坛和大家一起交流并了解一些前沿技术；',
+					'热爱互联网开发，喜欢编程，致力于长期稳定在互联网行业发展；',
+					'个人博客： https://www.yuque.com/xujian-iqkyx'
+				]
 			}
 		}
 	},
@@ -172,7 +196,8 @@ export default {
 		.list_content{
 			margin: 20rpx;
 			.list_item {
-				margin: 15rpx 0;
+				margin: 30rpx 0;
+				line-height: 50rpx;
 			}
 		}
 	}
